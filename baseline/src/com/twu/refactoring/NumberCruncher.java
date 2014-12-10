@@ -7,35 +7,12 @@ public class NumberCruncher {
         this.numbers = numbers;
     }
 
-    public int countEven() {
+    public int count(Checker checker) {
         int count = 0;
         for (int number : numbers) {
-            if (number % 2 == 0) count++;
+            if (checker.check(number)) count++;
         }
         return count;
     }
 
-    public int countOdd() {
-        int count = 0;
-        for (int number : numbers) {
-            if (number % 2 == 1) count++;
-        }
-        return count;
-    }
-
-    public int countPositive() {
-        int count = 0;
-        for (int number : numbers) {
-            if (number >= 0) count++;
-        }
-        return count;
-    }
-
-    public int countNegative() {
-        int count = 0;
-        for (int number : numbers) {
-            if (number < 0) count++;
-        }
-        return count;
-    }
 }
